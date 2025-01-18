@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+  <nav class="navbar">
+    <section class="nav--item--left">
+      <img src="./images/icon-menu.svg" alt="hamburger-menu" class="menu--open">
+      <img src="./images/logo.svg" alt="logo" class="logo">
+      <ul class="nav--sidebar">
+        <img src="./images/icon-close.svg" alt="icon--close" class="menu--close">
+        <li><a href="">Collections</a></li>
+        <li><a href="">Men</a></li>
+        <li><a href="">Women</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </section>
+    <section class="nav--item--right">
+      <div class="image--cart">
+        <img src="./images/icon-cart.svg" alt="icon--cart" class="item--cart">
+        <span class="cart--qty">3</span>
+        <section class="cart--items">
+          <h2>Cart</h2>
+          <section class="cart--item__details">
+            <p class="basket--empty">Your cart is empty.</p>
+            <section class="basket--filled">
+              <section class="basket--details">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="product-thumbnail" class="cart--selection--image">
+                <section class="cart--selection--info">
+                  <h2 class="cart--selection--name">Fall Limited Edition Sneakers</h2>
+                  <span class="cart--selection--price">$125.00</span>
+                  <span>x</span>
+                  <span class="cart--selection--qty">3</span>
+                  <strong class="cart--selection--total">$375.00</strong>
+                </section>
+                <img src="./images/icon-delete.svg" alt="delete-icon" class="delete-icon">
+              </section>
+              <button type="button" id="checkout-btn">Checkout</button>
+            </section>
+          </section>
+        </section>
+      </div>
+      <img src="./images/image-avatar.png" alt="image-avatar" class="image--avatar">
+    </section>
+  </nav>
+  <main class="container">
+    <section class="container--slide">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="./images/image-product-1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="./images/image-product-2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="./images/image-product-3.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="./images/image-product-4.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+    <section class="container--desktop">
+      <img src="./images/image-product-1.jpg" alt="product image">
+        <div class="row">
+          <div class="column">
+            <img src="./images/image-product-1-thumbnail.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor active">
+          </div>
+          <div class="column">
+            <img src="./images/image-product-2-thumbnail.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="./images/image-product-3-thumbnail.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="./images/image-product-4-thumbnail.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+          </div>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="mySlides2">
+              <img src="./images/image-product-1.jpg" style="width:100%">
+              </div>
+        
+              <div class="mySlides2">
+                <img src="./images/image-product-2.jpg" style="width:100%">
+              </div>
+          
+              <div class="mySlides2">
+                <img src="./images/image-product-3.jpg" style="width:100%">
+              </div>
+              
+              <div class="mySlides2">
+                <img src="./images/image-product-4.jpg" style="width:100%">
+              </div>
+            
+            <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+            <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+            <div class="column2">
+              <img class="demo cursor" src="./images/image-product-1-thumbnail.jpg" style="width:100%" onclick="currentSlide2(1)" alt="Nature and sunrise">
+
+              <img class="demo cursor" src="./images/image-product-2-thumbnail.jpg" style="width:100%" onclick="currentSlide2(2)" alt="Snow">
+
+              <img class="demo cursor" src="./images/image-product-3-thumbnail.jpg" style="width:100%" onclick="currentSlide2(3)" alt="Mountains and fjords">
+
+              <img class="demo cursor" src="./images/image-product-4-thumbnail.jpg" style="width:100%" onclick="currentSlide2(4)" alt="Northern Lights">
+          </div>
+        </div>
+    </section>
+    <section class="container--body">
+      <h2>
+        Sneaker Company
+      </h2>
+      <h3>
+        Fall Limited Edition Sneakers
+      </h3>
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <section class="container--body__pricing">
+        <section class="discounted--price">
+          <h2 id="discounted--price">$125.00</h2>
+          <p>50%</p>
+        </section>
+        <h2 id="initial--price">$250.00</h2>
+      </section>
+      <section class="container--body__quantity">
+        <img src="./images/icon-minus.svg" alt="minus" id="qty--decrement">
+        <h2 id="quantity">1</h2>
+        <img src="./images/icon-plus.svg" alt="plus" id="qty--increment">
+      </section>
+      <button type="button" id="add-cart">
+        <img src="./images/icon-cart.svg" alt="cart-image">
+        Add to cart
+      </button>
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">LORD HENDRIXX</a>.
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
